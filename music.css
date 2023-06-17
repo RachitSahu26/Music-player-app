@@ -1,0 +1,90 @@
+*{
+    margin: 0;padding: 0;
+}
+body{
+    background-color: rgb(131, 130, 129);
+}
+.container{
+    background-color:white;
+width:333px;
+text-align: center;
+margin-left: 550px;
+margin-top:133px;
+box-shadow: 0,0,0.3px rgba(0,0,0.8px);
+padding: 20px;
+/* padding-top: 10px; */
+height: 550px;
+border-radius: 20px;
+}
+.img-area {
+    margin-top: 33px;
+    /* object-fit: cover; */
+background-color: yellow;
+border-radius: 50%;
+width: 250px;
+margin-left: 40px;
+height: 250px;
+}
+.img-area img{
+    border-radius: 50%;
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+
+.music-control{
+    margin-top: 29px;
+height: 73px;width: 300px;
+/* background-color: greenyellow; */
+padding: 20px;
+align-items: center;
+justify-content: space-between;
+display: flex;
+}
+.music-control img{
+    width: 53px;
+    height: 53px;
+    justify-content: space-between;
+
+}
+
+#pause-button{
+position: absolute;
+right: 711px;
+display: none;
+}
+#play-button:hover{
+    background-color:red;
+    border-radius: 30px;
+    box-shadow: 0 0.3rem 2rem 0.2rem rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+#right-button:hover,#left-button:hover{
+    box-shadow: 0 0.3rem 2rem 0.2rem rgba(0,0,0,0.4);
+    cursor: pointer;
+    border-radius: 30px;
+
+}
+
+
+
+
+
+/* .............animation part....................... */
+
+
+.anime{
+    animation:imageRotate 3s linear infinite ;
+}
+
+@keyframes imageRotate{
+    from{
+transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+
+    }
+}
+
