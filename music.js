@@ -1,28 +1,64 @@
-const pauseButton=document.getElementById("pause-button");
-const playButton=document.getElementById("play-button");
 
-const control=document.getElementById("control");
+// ......play btn.....
+const playButton = document.getElementById("play-button");
 
-const rightButton=document.getElementById("right-button");
-const leftButton=document.getElementById("left-button");
+const control = document.getElementById("control");
+// ......right btn.....
 
+const rightButton = document.getElementById("right-button");
+// ......left btn.....
 
-
-const audio=document.getElementById("audio");
-
-
-playButton.addEventListener("click",function(){
-audio.play()
-})
+const leftButton = document.getElementById("left-button");
 
 
-pauseButton.addEventListener("click",function(){
-    audio.pause()
+
+const audio = document.getElementById("audio");
+
+const listOfSong=["./Let Me .mp3","./main tera hero.mp3","./Salamat.mp3","./Stranger.mp3"];
+
+
+
+
+
+
+
+
+
+
+
+// ............play btn functionality........
+
+let msuicImg=true;
+
+    playButton.addEventListener("click", function () {
+if(msuicImg){
+
+    audio.src=listOfSong[0];
+    playButton.src = "./pause.png";
+    msuicImg=false;
+}else{
+   
+    audio.pause();
+    playButton.src = "./play-button.png"; 
+    msuicImg=true;
+
+}
     })
+    musicSong = 0;
+
+  
+
+
+
+
+
+
+// ............left btn functionality........
 
 
     leftButton.addEventListener("click",function(){
-        
-        })
-    
-    
+
+    } )
+
+
+
