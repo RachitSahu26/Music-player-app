@@ -2,10 +2,10 @@
     margin: 0;padding: 0;
 }
 body{
-    background-color: rgb(131, 130, 129);
+    background-color: rgb(60, 55, 55);
 }
 .container{
-    background-color:white;
+    background-color:rgb(0, 0, 0);
 width:333px;
 text-align: center;
 margin-left: 550px;
@@ -15,6 +15,9 @@ padding: 20px;
 /* padding-top: 10px; */
 height: 550px;
 border-radius: 20px;
+}
+.music-main{
+    color: white;
 }
 .img-area {
     margin-top: 33px;
@@ -49,23 +52,36 @@ display: flex;
 }
 
 
+
+#left-button,#right-button{
+    background-color: white;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+}
+#play-button{
+    border: 2px solid white;
+    width: 71px;
+    height: 70px;
+    background-color: white;
+
+    border-radius: 30px;
+}
 #play-button:hover{
-    background-color:red;
-    border-radius: 30px;
-    box-shadow: 0 0.3rem 2rem 0.2rem rgba(0,0,0,0.4);
-    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.549);
+border: 2px solid red;
+cursor: pointer;
 }
-
-#right-button:hover,#left-button:hover{
-    box-shadow: 0 0.3rem 2rem 0.2rem rgba(0,0,0,0.4);
-    cursor: pointer;
-    border-radius: 30px;
+#right-button:hover{
+    background-color: rgba(255, 255, 255, 0.549);
+cursor: pointer;
 
 }
+#left-button:hover{
+    background-color: rgba(255, 255, 255, 0.549);
+cursor: pointer;
 
-
-
-
+}
 
 /* .............animation part....................... */
 
@@ -86,7 +102,9 @@ transform: rotate(0deg);
 }
 
 
-
+.style{
+    box-shadow: 0px 0px 12px red;
+}
 
 
 

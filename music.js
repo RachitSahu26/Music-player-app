@@ -15,8 +15,18 @@ const leftButton = document.getElementById("left-button");
 
 
 
+
+
+
 // ......song name .....
 let songN = document.getElementById("song-name");
+
+
+
+
+
+// ......song Img .....
+let songImg = document.getElementById("rotate-image");
 
 
 
@@ -24,8 +34,16 @@ let songN = document.getElementById("song-name");
 // ......singer name .....
 let singerN = document.getElementById("singer-name");
 
+
+
+
+
 // ....changing image ....
 let ChangeImg = document.getElementsByClassName("img-area");
+
+
+
+
 
 
 const music = document.querySelector("audio");
@@ -37,6 +55,7 @@ const listOfSong = [
         songUrl: "Let Me ",
         singerName: "Zyan Malik",
         songName: "Let Me",
+        songImg:"Zyan",
 
     },
 //  ...............2 song...........
@@ -45,6 +64,7 @@ const listOfSong = [
         songUrl: "main tera hero",
         singerName: "Arman Malik",
         songName: "Mai Tera Hero",
+        songImg:"Main terra hero",
 
     },
 
@@ -58,7 +78,7 @@ const listOfSong = [
         songUrl: "Salamat",
         singerName: "Rachit Sahu",
         songName: "Salamat Rahe",
-
+        songImg:"Salamat",
     },
 //  ...............4 song...........
 
@@ -67,6 +87,7 @@ const listOfSong = [
         songUrl: "Stranger",
         singerName: "Sadie Sink",
         songName: "Stranger Thing",
+        songImg:"Stranger",
 
     },
 
@@ -77,6 +98,7 @@ const listOfSong = [
     songUrl: "Doctor_Strange___Believer(256k)",
     singerName: "Rachit",
     songName: "Believer",
+    songImg:"Beliver",
 
 },
 //  ...............6 song...........
@@ -86,29 +108,11 @@ const listOfSong = [
     songUrl: "NEFFEX_-_Cold_❄️[Copyright_Free](256k)",
     singerName: "Rachit Favourite",
     songName: "Cold",
+    songImg:"cold",
 
 },
 
 //  ...............7 song...........
-
-
-{
-    songUrl: "Kidi_Touch_it_Ringtone____Touch_It%21_Shut_Up%21_ringtone____Kidi_-_Touch_It_New_Remix_Ringtone____reels(256k)",
-    singerName: "No Singer",
-    songName: "Kidi_Touch",
-
-},
-
-// /  ...............7 song...........
-
-
-{
-    songUrl: "Baby",
-    singerName: "Justine_Bieber",
-    songName: "Baby",
-
-},
-
 
 
 
@@ -132,6 +136,8 @@ const playMus = () => {
 
      isPlaying = false;
     music.play();
+    songImg.classList.add("anime");
+    songImg.classList.add("style");
     playButton.src = "./pause.png";
 
 }
@@ -139,6 +145,10 @@ const pauseMus = () => {
    isPlaying = true;
 
     music.pause();
+    songImg.classList.remove("anime");
+    songImg.classList.remove("style");
+  
+
     playButton.src = "./play-button.png";
 
 
@@ -161,8 +171,8 @@ playButton.addEventListener("click", () => {
 
 
 const musicLoad=(listOfSong)=>{
-    music.src="./"+listOfSong.songUrl +".mp3";
-
+    music.src="./"+listOfSong.songUrl+".mp3";
+    songImg.src="./"+listOfSong.songImg+".jpg";
     singerN.textContent=listOfSong.singerName;
     songN.textContent=listOfSong.songName;
     
