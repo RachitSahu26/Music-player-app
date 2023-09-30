@@ -105,7 +105,7 @@ const listOfSong = [
 
 
 {
-    songUrl: "NEFFEX_-_Cold_❄️[Copyright_Free](256k)",
+    songUrl: "NEFFEX_-_Cold_[Copyright_Free](256k)",
     singerName: "Rachit Favourite",
     songName: "Cold",
     songImg:"cold",
