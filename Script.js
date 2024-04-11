@@ -49,70 +49,70 @@ let ChangeImg = document.getElementsByClassName("img-area");
 const music = document.querySelector("audio");
 
 const listOfSong = [
- 
-//  ...............1 song...........
+
+    //  ...............1 song...........
     {
         songUrl: "Let Me ",
         singerName: "Zyan Malik",
         songName: "Let Me",
-        songImg:"Zyan",
+        songImg: "Zyan",
 
     },
-//  ...............2 song...........
+    //  ...............2 song...........
 
     {
         songUrl: "main tera hero",
         singerName: "Arman Malik",
         songName: "Mai Tera Hero",
-        songImg:"Main terra hero",
+        songImg: "Main terra hero",
 
     },
 
 
-//  ...............3 song...........
+    //  ...............3 song...........
 
-   
+
 
 
     {
         songUrl: "Salamat",
         singerName: "Rachit Sahu",
         songName: "Salamat Rahe",
-        songImg:"Salamat",
+        songImg: "Salamat",
     },
-//  ...............4 song...........
+    //  ...............4 song...........
 
 
     {
         songUrl: "Stranger",
         singerName: "Sadie Sink",
         songName: "Stranger Thing",
-        songImg:"Stranger",
+        songImg: "Stranger",
 
     },
 
-//  ...............5 song...........
+    //  ...............5 song...........
 
 
-{
-    songUrl: "Doctor_Strange___Believer(256k)",
-    singerName: "Rachit",
-    songName: "Believer",
-    songImg:"Beliver",
+    {
+        songUrl: "Doctor_Strange___Believer(256k)",
+        singerName: "Rachit",
+        songName: "Believer",
+        songImg: "Beliver",
 
-},
-//  ...............6 song...........
+    },
+    //  ...............6 song...........
 
 
-{
-    songUrl: "NEFFEX_-_Cold_[Copyright_Free](256k)",
-    singerName: "Rachit Favourite",
-    songName: "Cold",
-    songImg:"cold",
+    {
+        songUrl: "NEFFEX_-_Cold_[Copyright_Free](256k)",
+        singerName: "Rachit Favourite",
+        songName: "Cold",
+        songImg: "cold",
 
-},
+    },
 
-//  ...............7 song...........
+    //  ...............7 song...........
 
 
 
@@ -134,7 +134,7 @@ const listOfSong = [
 let isPlaying = true;
 const playMus = () => {
 
-     isPlaying = false;
+    isPlaying = false;
     music.play();
     songImg.classList.add("anime");
     songImg.classList.add("style");
@@ -142,12 +142,12 @@ const playMus = () => {
 
 }
 const pauseMus = () => {
-   isPlaying = true;
+    isPlaying = true;
 
     music.pause();
     songImg.classList.remove("anime");
     songImg.classList.remove("style");
-  
+
 
     playButton.src = "./play-button.png";
 
@@ -157,7 +157,7 @@ const pauseMus = () => {
 
 playButton.addEventListener("click", () => {
     if (isPlaying) {
-       playMus();
+        playMus();
     } else {
         pauseMus();
     }
@@ -170,20 +170,22 @@ playButton.addEventListener("click", () => {
 
 
 
-const musicLoad=(listOfSong)=>{
-    music.src="./"+listOfSong.songUrl+".mp3";
-    songImg.src="./"+listOfSong.songImg+".jpg";
-    singerN.textContent=listOfSong.singerName;
-    songN.textContent=listOfSong.songName;
-    
+const musicLoad = (listOfSong) => {
+    music.src = `./All Music/${listOfSong.songUrl}.mp3`;
+
+    songImg.src = `./All Pics/${listOfSong.songImg}.jpg`;
+
+    singerN.textContent = listOfSong.singerName;
+    songN.textContent = listOfSong.songName;
+
 
 }
 
 
-let musicIndex=0;
+let musicIndex = 0;
 rightButton.addEventListener("click", () => {
-    
-    musicIndex=(musicIndex+1)%listOfSong.length;
+
+    musicIndex = (musicIndex + 1) % listOfSong.length;
     musicLoad(listOfSong[musicIndex]); // Example: Load the third song from the list
     playButton.src = "./pause.png";
     music.play();
@@ -192,9 +194,9 @@ rightButton.addEventListener("click", () => {
 
 // ............right btn functionality........
 leftButton.addEventListener("click", () => {
-    musicIndex=(musicIndex-1+listOfSong.length)%listOfSong.length;
+    musicIndex = (musicIndex - 1 + listOfSong.length) % listOfSong.length;
     musicLoad(listOfSong[musicIndex]); // Example: Load the third song from the list
     playButton.src = "./pause.png";
-   
+
     music.play();
 });
